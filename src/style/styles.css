@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/*https://i.ibb.co/z4MRR4Z/mountain-7879029.jpg*/
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: sans-serif;
+  position: relative;
+  background-image: url("https://i.hizliresim.com/2dm5s9w.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.toggleWindowCover {
+  top: 0 !important;
+  left: 0 !important;
+  transform: none;
+  width: 100% !important;
+  height: 100% !important;
+  transition: 0.2s ease-in-out;
+}
+
+#callBackButton {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#data {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+table {
+  border: 5px solid black;
+  width: 100%;
+  height: 100%;
+}
+
+tr {
+  border-bottom: 3px solid blue !important;
+}
+
+td {
+  border: 3px solid black !important;
+  background: #fff !important;
+  text-align: center;
+}
+
+#window {
+  grid-template-columns: auto auto auto auto;
+  display: inline-grid;
+  gap: 10px 10px;
+
+  box-sizing: border-box;
+  /*transition: 0.2s ease-in-out;*/
+  width: 20%;
+  height: 60%;
+  position: relative;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  box-shadow: 0px 0px 10px rgb(94, 94, 94);
+  border: 1px solid rgb(0 0 0 / 46%);
+  border-radius: 8px;
+
+  overflow: hidden;
+}
+
+#window > .filterWrapper {
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: blur(10px);
+  backdrop-filter: blur(15px);
+  background: #00000061;
+}
+
+#window > .panel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+#window > .panel > .item {
+  width: 100%;
+  height: 100%;
+  background: red;
+}
+#window > .panel > .item:nth-child(1) {
+  grid-template-columns: auto auto auto;
+  display: grid;
+  justify-content: center;
+  gap: 0px 5px;
+  align-items: center;
+  height: 7%;
+  background-color: #0000003d;
+}
+#window > .panel > .item:nth-child(2) {
+  height: 40%;
+  background-color: transparent;
+}
+#window > .panel > .item:nth-child(3) {
+  height: 100%;
+  background-color: transparent;
+}
+
+#window > .panel > .item:nth-child(1) > button {
+  cursor: pointer;
+  border: 0;
+  padding: 8px;
+  border-radius: 100%;
+  transition: all 0.05s ease-in;
+}
+#window > .panel > .item:nth-child(1) > button:hover:focus:active {
+  background: #ffffff47;
+  transition: all 0.05s ease-in;
+}
+#window > .panel > .item:nth-child(1) > button:nth-child(1) {
+  background: red;
+}
+#window > .panel > .item:nth-child(1) > button:nth-child(2) {
+  background: yellow;
+}
+#window > .panel > .item:nth-child(1) > button:nth-child(3) {
+  background: green;
+}
